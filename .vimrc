@@ -20,11 +20,12 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
+Plug 'Valloric/YouCompleteMe'                                                   
+Plug 'Xuyuanp/nerdtree-git-plugin'                                              
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
-colorscheme gruvbox
 set background=dark
 
 nnoremap <C-J> <C-W><C-J>
