@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   end
   config.vm.provision "file", source: "./kainos-chain.pem", destination: "~/kainos-chain.pem"
   config.vm.provision "shell", inline: "mkdir -p ~/.ssh"
-  config.vm.provision "file", source "~/.ssh/id_ed25519", destination: "~/.ssh/id_ed25519"
+  config.vm.provision "file", source: "~/.ssh/id_ed25519", destination: "~/.ssh/id_ed25519"
   config.vm.provision "shell", inline: <<-SHELL
     echo "provisioning ..."
 
