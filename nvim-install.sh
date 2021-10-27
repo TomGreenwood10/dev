@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo apt-get install -y python3-dev
+
 sudo apt-get install -y neovim
 
 mkdir -p ~/.config/nvim/autoload
