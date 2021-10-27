@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt-get install nvim
+sudo apt-get install neovim
 
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.config/nvim/plugged
