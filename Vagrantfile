@@ -30,22 +30,6 @@ Vagrant.configure("2") do |config|
     apt-get install linux-headers-$(uname -r) build-essential dkms
     apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
 
-    # Software / apps install
-    # Change to vagrant user so installed apps will work with this sign in (note: sudo's are now needed)
-    su vagrant
-
-    # tree
-    echo "\n\n\ninstalling tree ..."
-    sudo apt-get install tree
-
-    # python
-    sudo echo "\n\n\ninstalling python ..."
-    sudo apt-get install -y python3.9
-    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.9 1
-    sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
-    echo "\n\n\ninstalling python-dev ..."
-    sudo apt-get install -y python3.9-dev
-
     sudo shutdown
  SHELL
 
