@@ -4,6 +4,7 @@ Vagrant.configure("2") do |config|
     vb.memory = "4096"
   end
   config.vm.provision "file", source: "./kainos-chain.pem", destination: "~/kainos-chain.pem"
+  config.vm.provision "file", source: "./nvim-linux64.tar.gz", destination: "~/nvim-linux64.tar.gz"
   config.vm.provision "shell", inline: "mkdir -p ~/.ssh"
   config.vm.provision "file", source: "~/.ssh/id_ed25519", destination: "~/.ssh/id_ed25519"
   config.vm.provision "file", source: "./nvim-install.sh", destination: "~/nvim-install.sh"
@@ -30,7 +31,7 @@ Vagrant.configure("2") do |config|
     apt-get install linux-headers-$(uname -r) build-essential dkms
     apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
 
-    sudo shutdown
+    sudo reboot
  SHELL
 
 end
