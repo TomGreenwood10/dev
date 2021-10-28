@@ -28,15 +28,20 @@ Plug 'morhetz/gruvbox'
 Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 " ===================================================
 
 " Key remaps ----------------------------------------
+" Move between windows
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Toggle NERDTree
+nnoremap <F6> :NERDTreeToggle<CR>
 " ===================================================
 
 " Misc ----------------------------------------------
