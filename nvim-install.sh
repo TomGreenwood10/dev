@@ -1,9 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.config/nvim/plugged
 mkdir -p ~/.config/nvim/undodir
 sudo chmod 777 ~/.config/nvim/*
+sudo apt-get install neovim
 
 curl -fLo ~/.config/nvim/autoload/plug.vim \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
