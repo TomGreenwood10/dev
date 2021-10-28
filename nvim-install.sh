@@ -7,7 +7,7 @@ sudo apt-get install -y neovim
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.config/nvim/plugged
 mkdir -p ~/.config/nvim/undodir
-sudo chmod 777 ~/.config/nvim
+sudo chmod 777 ~/.config/nvim/*
 
 curl -fLo ~/.config/nvim/autoload/plug.vim \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
