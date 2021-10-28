@@ -12,7 +12,7 @@ curl -fLo ~/.config/nvim/init.vim \
 
 nvim -c PlugInstall +qa
 
-sudo apt install build-essential cmake vim-nox python3-dev
+sudo apt install -y build-essential cmake vim-nox python3-dev
 sudo apt install -y mono-complete golang nodejs default-jdk npm
 
 python3 ~/.config/nvim/plugged/YouCompleteMe/install.py --all
