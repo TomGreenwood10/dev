@@ -3,13 +3,26 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "4096"
   end
+
+  # File transfers ------------------------------------------------------------
+
+  # Certificate
   config.vm.provision "file", source: "./kainos-chain.pem", destination: "~/kainos-chain.pem"
+
+  # nvim v 0.5 zipped file (installs with package managers give 0.4.x version 
+  # at time of writing)
   config.vm.provision "file", source: "./nvim-linux64.tar.gz", destination: "~/nvim-linux64.tar.gz"
+
+  # Github ssh (so don't need to add a newe key to github every time)
   config.vm.provision "shell", inline: "mkdir -p ~/.ssh"
   config.vm.provision "file", source: "~/.ssh/id_ed25519", destination: "~/.ssh/id_ed25519"
+  
+  # Software installation scripts
+  config.vm.provision "file", path: "misc-install.sh"
   config.vm.provision "file", source: "./nvim-install.sh", destination: "~/nvim-install.sh"
-  config.vm.provision "shell", inline: "chmod 777 nvim-install.sh"
-  config.vm.provision "shell", path: "certification-setup.sh"
+  config.vm.provision "file", path: "certification-setup.sh"
+
+  # Scripts
   config.vm.provision "shell", inline: <<-SHELL
     echo "provisioning ..."
 
