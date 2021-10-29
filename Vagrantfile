@@ -18,11 +18,12 @@ Vagrant.configure("2") do |config|
   config.vm.provision "file", source: "~/.ssh/id_ed25519", destination: "~/.ssh/id_ed25519"
   
   # Software installation scripts
-  config.vm.provision "file", path: "misc-install.sh"
+  config.vm.provision "file", source: "./misc-install.sh", destination: "~/misc-install.sh"
   config.vm.provision "file", source: "./nvim-install.sh", destination: "~/nvim-install.sh"
-  config.vm.provision "file", path: "certification-setup.sh"
+  config.vm.provision "file", source: "./certification-setup.sh", destination: "~/certification-setup.sh"
 
-  # Scripts
+
+  # Scripts -------------------------------------------------------------------
   config.vm.provision "shell", inline: <<-SHELL
     echo "provisioning ..."
 
