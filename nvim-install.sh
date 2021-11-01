@@ -1,10 +1,20 @@
 #!/bin/bash
 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+nvm install node
+source ~/.nvm/nvm.sh
+npm i -g pyright
+
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.config/nvim/plugged
 mkdir -p ~/.config/nvim/undodir
 sudo chmod 777 ~/.config/nvim/*
-sudo apt-get install neovim
+
+sudo apt install -y build-essential python3-dev python3-pip
+sudo snap install nvim --classic
 
 curl -fLo ~/.config/nvim/autoload/plug.vim \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -12,9 +22,3 @@ curl -fLo ~/.config/nvim/init.vim \
     https://raw.githubusercontent.com/tomgreenwood10/dev/master/init.vim
 
 nvim -c PlugInstall +qa
-
-sudo apt install -y build-essential cmake vim-nox python3-dev
-sudo apt install -y mono-complete golang nodejs default-jdk npm
-
-python3 ~/.config/nvim/plugged/YouCompleteMe/install.py --all
-
