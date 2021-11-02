@@ -9,10 +9,6 @@ Vagrant.configure("2") do |config|
   # Certificate
   config.vm.provision "file", source: "./kainos-chain.pem", destination: "~/kainos-chain.pem"
 
-  # nvim v 0.5 zipped file (installs with package managers give 0.4.x version 
-  # at time of writing)
-  config.vm.provision "file", source: "./nvim-linux64.tar.gz", destination: "~/nvim-linux64.tar.gz"
-
   # Github ssh (so don't need to add a newe key to github every time)
   config.vm.provision "shell", inline: "mkdir -p ~/.ssh"
   config.vm.provision "file", source: "~/.ssh/id_ed25519", destination: "~/.ssh/id_ed25519"
