@@ -20,6 +20,7 @@ Vagrant.configure("2") do |config|
   # Software installation scripts
   config.vm.provision "file", source: "./misc-install.sh", destination: "~/misc-install.sh"
   config.vm.provision "file", source: "./nvim-install.sh", destination: "~/nvim-install.sh"
+  config.vm.provision "file", source: "./lsp-config.vim", destination: "~/lsp-config.vim"
   config.vm.provision "file", source: "./certification-setup.sh", destination: "~/certification-setup.sh"
 
 
@@ -34,8 +35,6 @@ Vagrant.configure("2") do |config|
 
     apt-get install linux-headers-$(uname -r) build-essential dkms
     apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
-
-    ./nvim-install.sh
 
     sudo reboot
  SHELL
