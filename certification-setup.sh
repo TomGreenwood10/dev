@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Certificates for kainos man-in-the-middle ZScaler (applications like pycharm
 # won't install without this). The .pem certificate must be downloaded from 
 # https://kainossoftwareltd.sharepoint.com/:u:/r/systems/Shared%20Documents/Systems%20-%20Help/Voice%20and%20Networks/ZScaler/kainos-chain.pem?csf=1&web=1&e=ptJkbw
@@ -9,7 +8,7 @@
 # will lead to certificates not being recognised - change to local timezone
 
 echo Provisioning certificates ...
-i
+
 # Change timezone so that it will match laptop clock
 timedatectl set-timezone Europe/London 
 
