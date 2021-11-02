@@ -10,6 +10,8 @@ npm i -g pyright
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.config/nvim/plugged
 mkdir -p ~/.config/nvim/undodir
+mkdir -p ~/.config/nvim/plug-config
+mv ~/lsp-config ~/.config/nvim/plug-config/lsp-config.vim
 sudo chmod 777 ~/.config/nvim/*
 
 sudo apt install -y build-essential python3-dev python3-pip
