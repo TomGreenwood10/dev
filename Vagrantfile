@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   
   # Clone setup repo (decided to use script once in the VM to complete setup
   # and install software as it gives more control
-  git clone git@github.com:TomGreenwood10/dev.git
+  config.vm.provision "shell", inline: "git clone git@github.com:TomGreenwood10/dev.git"
 
   # Updates
   config.vm.provision "shell", inline: "apt-get update"
