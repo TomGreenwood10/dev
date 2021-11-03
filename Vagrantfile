@@ -31,7 +31,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "apt-get install -y virtualbox-guest-x11"
 
   config.vm.provision "shell", inline: "sudo reboot"
->>>>>>> 99c6cec3d904bd160565da89271406a4d3bd030c
-
 end
 
