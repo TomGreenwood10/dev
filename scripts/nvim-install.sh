@@ -13,14 +13,13 @@ mkdir -p ~/.config/nvim/plugged
 mkdir -p ~/.config/nvim/undodir
 mkdir -p ~/.config/nvim/plug-config
 sudo chmod 777 ~/.config/nvim/*
-cp lsp-config.vim ~/.config/nvim/plug-config/lsp-config.vim
+cp config-files/lsp-config.vim ~/.config/nvim/plug-config/lsp-config.vim
+cp config-files/init.vim ~/.config/nvim/init.vim
 
 sudo apt install -y build-essential python3-dev python3-pip
 sudo snap install nvim --classic
 
 curl -fLo ~/.config/nvim/autoload/plug.vim \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-curl -fLo ~/.config/nvim/init.vim \
-    https://raw.githubusercontent.com/tomgreenwood10/dev/master/init.vim
 
 nvim -c PlugInstall +qa
