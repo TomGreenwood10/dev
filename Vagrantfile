@@ -32,6 +32,9 @@ Vagrant.configure("2") do |config|
     apt-get install linux-headers-$(uname -r) build-essential dkms
     apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
 
+    # Desktop GUI
+    apt-get install -y ubuntu-desktop
+
     sudo reboot
  SHELL
 
