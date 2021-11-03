@@ -10,7 +10,7 @@
 echo Provisioning certificates ...
 
 # Change timezone so that it will match laptop clock
-timedatectl set-timezone Europe/London 
+sudo timedatectl set-timezone Europe/London 
 
 # Make crt and put it in certificates directory
 mkdir /usr/local/share/ca-certificates/extra
@@ -18,5 +18,5 @@ openssl x509 -in kainos-chain.pem -inform PEM -out kainos-chain.crt
 cp /home/vagrant/kainos-chain.crt /usr/local/share/ca-certificates/extra/kainos-chain.crt
 
 # Update certificates and restart snapd
-update-ca-certificates
-systemctl restart snapd
+sudo update-ca-certificates
+sudo systemctl restart snapd
