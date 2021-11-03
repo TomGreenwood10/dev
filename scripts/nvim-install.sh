@@ -22,4 +22,4 @@ sudo snap install nvim --classic
 curl -fLo ~/.config/nvim/autoload/plug.vim \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-nvim -c PlugInstall
+nvim -c PlugInstall +qa
