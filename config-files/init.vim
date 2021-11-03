@@ -102,6 +102,7 @@ lua <<EOF
   }
 EOF
 
+lua require'lspconfig'.bashls.setup{}
 "lua << EOF
 "require'lspconfig'.pyright.setup{}
 "EOF

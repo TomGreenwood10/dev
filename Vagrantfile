@@ -13,30 +13,25 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "mkdir -p ~/.ssh"
   config.vm.provision "file", source: "~/.ssh/id_ed25519", destination: "~/.ssh/id_ed25519"
   
-  # Software installation scripts
-  config.vm.provision "file", source: "./misc-install.sh", destination: "~/misc-install.sh"
-  config.vm.provision "file", source: "./nvim-install.sh", destination: "~/nvim-install.sh"
-  config.vm.provision "file", source: "./lsp-config.vim", destination: "~/lsp-config.vim"
-  config.vm.provision "file", source: "./certification-setup.sh", destination: "~/certification-setup.sh"
+  # Clone setup repo (decided to use script once in the VM to complete setup
+  # and install software as it gives more control
+  git clone git@github.com:TomGreenwood10/dev.git
 
+  # Updates
+  config.vm.provision "shell", inline: "apt-get update"
+  config.vm.provision "shell", inline: "dpkg --configure -a"
+  config.vm.provision "shell", inline: "apt-get upgrade -y"
 
-  # Scripts -------------------------------------------------------------------
-  config.vm.provision "shell", inline: <<-SHELL
-    echo "provisioning ..."
+  # Utils install (will always want these straigt away)
+  config.vm.provision "shell", inline: "apt-get install -y linux-headers-$(uname -r)"
+  config.vm.provision "shell", inline: "apt-get install -y build-essential"
+  config.vm.provision "shell", inline: "apt-get install -y dkms"
+  config.vm.provision "shell", inline: "apt-get install -y virtualbox-guest-dkms"
+  config.vm.provision "shell", inline: "apt-get install -y virtualbox-guest-utils"
+  config.vm.provision "shell", inline: "apt-get install -y virtualbox-guest-x11"
 
-    # Updates
-    apt-get update
-    dpkg --configure -a
-    apt-get upgrade -y
-
-    apt-get install linux-headers-$(uname -r) build-essential dkms
-    apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
-
-    # Desktop GUI
-    apt-get install -y ubuntu-desktop
-
-    sudo reboot
- SHELL
+  config.vm.provision "shell", inline: "sudo reboot"
+>>>>>>> 99c6cec3d904bd160565da89271406a4d3bd030c
 
 end
 

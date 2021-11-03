@@ -6,6 +6,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 nvm install node
 npm i -g pyright
+npm i -g bash-language-server
 
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.config/nvim/plugged
