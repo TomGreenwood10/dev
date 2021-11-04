@@ -7,6 +7,7 @@ export NVM_DIR="$HOME/.nvm"
 nvm install node
 npm i -g pyright
 npm i -g bash-language-server
+npm i -g sql-language-server
 
 mkdir -p ~/.config/nvim/autoload
 mkdir -p ~/.config/nvim/plugged

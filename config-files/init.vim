@@ -108,6 +108,11 @@ lua require'lspconfig'.bashls.setup{}
 "require'lspconfig'.pyright.setup{}
 "EOF
 
+" SQL completion (see github.com/joe-re/sql-language-server)
+let g:LanguageClient_serverCommands = {
+    \ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
+    \ }
+
 source ~/.config/nvim/plug-config/lsp-config.vim
 " ===================================================
 
