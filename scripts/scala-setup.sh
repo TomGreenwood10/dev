@@ -5,7 +5,7 @@
 # Note: nvim-install.sh adds the scala language server to nvim (metals)
 
 # Install coursier launcher (cs)
-curl -fLo cs https://git/io/coursier-cli-"$(uname | tr LD ld)"
+curl -fLo cs https://git.io/coursier-cli-"$(uname | tr LD ld)"
 chmod +x cs
 ./cs install cs
 rm cs
