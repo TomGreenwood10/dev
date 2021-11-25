@@ -43,6 +43,11 @@ a desktop GUI. To use vagrant see
 installed, dowload the version of the Vagrantfile that you require, place it in
 a dedicated directoy and run `vagrant up` to deploy.
 
+*Note: The files will look for the private ssh key ~/.ssh/id_ed25519 on the 
+host machine and copy it to the VM for ssh access to github. If change if your
+private key has a different name / location or remove these lines (12 - 14) 
+altogether if you like.
+
 ## Tests
 The contents in this directory have not been thoroughly tested - please inspect
 before using and use at your own risk.
