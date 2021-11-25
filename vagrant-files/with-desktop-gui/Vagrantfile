@@ -28,6 +28,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "apt-get install -y ubuntu-desktop"
   # ===========================================================================
 
-  config.vm.provision "shell", inline: "sudo reboot"
+  config.vm.provision "shell", inline: "sudo shutdown"
 end
-
