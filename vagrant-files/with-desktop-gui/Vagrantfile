@@ -29,6 +29,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "apt-get install -y virtualbox-guest-dkms"
   config.vm.provision "shell", inline: "apt-get install -y virtualbox-guest-utils"
   config.vm.provision "shell", inline: "apt-get install -y virtualbox-guest-x11"
+  config.vm.provision "shell", inline: "apt-get install -y tree"
+  config.vm.provision "shell", inline: "apt-get install -y ubuntu-desktop"
 
   config.vm.provision "shell", inline: "sudo reboot"
 end
