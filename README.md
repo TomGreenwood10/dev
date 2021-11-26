@@ -9,7 +9,8 @@ Cloning the repo is only necessray for development of new tools and scripts.
 
 Download a file with:
 ```
-curl -fLo ./<name-of-file> https://raw.githubusercontent.com/TomGreenwood10/dev/master/<repo-file-path>
+curl -fLo ./<name-of-file> \
+    https://raw.githubusercontent.com/TomGreenwood10/dev/master/<repo-file-path>
 ```
 
 ## Tools
