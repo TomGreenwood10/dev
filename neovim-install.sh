@@ -19,7 +19,11 @@ curl -fLo ~/.config/nvim/init.vim \
 
 # Install utils and neovim
 sudo apt install -y build-essential python3-dev python3-pip
-sudo snap install nvim --classic
+pip install pynvim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+sudo mv squashfs-root /
+sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
 
 # Install plugins
 curl -fLo ~/.config/nvim/autoload/plug.vim \
