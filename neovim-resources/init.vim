@@ -108,6 +108,8 @@ lua require'lspconfig'.bashls.setup{}
 "require'lspconfig'.pyright.setup{}
 "EOF
 
+lua require'lspconfig'.metals.setup{}
+
 source ~/.config/nvim/plug-config/lsp-config.vim
 " ===================================================
 
