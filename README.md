@@ -3,38 +3,23 @@ This repo contains random setup tools / scripts that I use to create and
 configure my development environment for data engineering.
 
 ## How to use
+Pull the repo, then run the installer script. It will ask if you want to
+install each software.
+
+### Trouble shooting
+* Make sure you run the installer script from inside the dev/ directory.
+* Make sure the installer script is exexutable. You may need to run
+`chmod +x installer.sh`
+* Make sure the individual installers are exexutable (see method above)
 The best way to use the contents of this repo is to download the required file
 directly and treat these as one-off tools as they can be used in isolation.
 Cloning the repo is only necessray for development of new tools and scripts.
 
-Download a file with:
-```
-curl -fLo ./<name-of-file> \
-    https://raw.githubusercontent.com/TomGreenwood10/dev/master/<repo-file-path>
-```
-
 ## Tools
-### neovim-install.sh
+### neovim
 Script which will install [Neovim](https://neovim.io) with custom configuration
-and language conletion support for python, bash and scala.
+and language conletion support for python and bash.
 
-*Note: The python3 interpreter that is already on your system will be used but
-the script will install scala, java, scala build tool (sbt), coursier and some
-other dependancies*
-
-*Note: The script requires user interaction so is not fully automated. This is 
-as a result of the `cs setup` command which is coursier's scala environment
-setup. It will ask the user to proceed or not on dependancy installations such
-as java.*
-
-To run the script:
-```
-./neovim-install.sh
-```
-
-The script utilises other files in the neovim-resources directory but **you do 
-not need to download the neovim-resources directory** as the script will fetch
-the files directly from github.
 
 ### Vagrant files
 The vagrant-files/ directory and subdirectories contain vagrant files for 
