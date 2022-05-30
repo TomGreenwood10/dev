@@ -18,9 +18,9 @@ npm i -g bash-language-server
 mkdir -p ~/.config/nvim/{autoload,plugged,undodir,plug-config}
 sudo chmod 777 ~/.config/nvim/*
 curl -fLo ~/.config/nvim/plug-config/lsp-config.vim \
-    https://raw.githubusercontent.com/TomGreenwood10/dev/master/resources/neovim/lsp-config.vim
+    https://raw.githubusercontent.com/TomGreenwood10/dev/master/neovim-resources/lsp-config.vim
 curl -fLo ~/.config/nvim/init.vim \
-    https://raw.githubusercontent.com/TomGreenwood10/dev/master/resources/neovim/init.vim
+    https://raw.githubusercontent.com/TomGreenwood10/dev/master/neovim-resources/init.vim
 
 # Install utils and neovim
 sudo apt install -y build-essential python3-dev python3-pip
