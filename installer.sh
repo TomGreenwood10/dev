@@ -1,3 +1,5 @@
+#!/bin/bash
+	
 # Script to install various softwares chosen by users (add to over time)
 
 # # Debugging: exit when any command fails, and print error message
@@ -7,10 +9,12 @@
 
 # Add installer script paths to the below hashmap
 declare -A installers
-installers["neovim"]=install_neovim
+installers["neovim"]=./installers/neovim.sh
 installers["docker"]=./installers/docker.sh
+installers["awscli"]=./installers/awscli.sh
+installers["terraform"]=./installers/terraform.sh
 
-softwares_all=("neovim" "docker")
+softwares_all=("neovim" "docker" "awscli" "terraform")
 softwares_install=()
 
 
