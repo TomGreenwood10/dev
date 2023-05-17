@@ -13,8 +13,9 @@ installers["neovim"]=./installers/neovim.sh
 installers["docker"]=./installers/docker.sh
 installers["awscli"]=./installers/awscli.sh
 installers["terraform"]=./installers/terraform.sh
+installers["java"]=./installers/java.sh
 
-softwares_all=("neovim" "docker" "awscli" "terraform")
+softwares_all=("neovim" "docker" "awscli" "terraform", "java")
 softwares_install=()
 
 

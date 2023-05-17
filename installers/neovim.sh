@@ -4,6 +4,7 @@
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage
+sudo mv ./nvim.appimage /usr/local/bin/nvim
 
 # Install other dependancies
 sudo apt install -y build-essential python3-dev python3-pip
