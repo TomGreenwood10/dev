@@ -1,0 +1,10 @@
+# Work account (tmgreenwood)
+Host github.com
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa    # Must be the ssh key without extension
+
+# Personal account (tomgreenwood10)
+Host github.com-personal
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa_personal
+
