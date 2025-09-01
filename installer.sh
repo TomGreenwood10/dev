@@ -10,12 +10,13 @@
 # Add installer script paths to the below hashmap
 declare -A installers
 installers["neovim"]=./installers/neovim.sh
+installers["linux-tools"]=./installers/linux-tools.sh
 installers["docker"]=./installers/docker.sh
 installers["awscli"]=./installers/awscli.sh
 installers["terraform"]=./installers/terraform.sh
 installers["java"]=./installers/java.sh
 
-softwares_all=("neovim" "docker" "awscli" "terraform", "java")
+softwares_all=("neovim" "linux-tools" "docker" "awscli" "terraform", "java")
 softwares_install=()
 
 
