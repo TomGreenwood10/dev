@@ -1,6 +1,6 @@
 ---
 name: python-conventions
-descroption: Guidance on python coding conventions. Use whenever implimenting, writing or refactoring python code.
+description: Guidance on python coding conventions. Use whenever implimenting, writing or refactoring python code.
 ---
 
 Apply the following conventions to any new or altered code. Don't add or apply this to code that is not being altered. For example if a user is asking for a modification to a function - don't add a docstring to the module unless explicitly asked or the module is being created by the action.
